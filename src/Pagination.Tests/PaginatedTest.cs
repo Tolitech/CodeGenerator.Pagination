@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Tolitech.CodeGenerator.Pagination.Tests.Models;
+using System.Linq;
 using Xunit;
+using Tolitech.CodeGenerator.Pagination.Tests.Models;
 
 namespace Tolitech.CodeGenerator.Pagination.Tests
 {
@@ -67,6 +68,8 @@ namespace Tolitech.CodeGenerator.Pagination.Tests
             Assert.True(paginated.IsLastPage == true);
             Assert.True(paginated.FirstItemOnPage == 41);
             Assert.True(paginated.LastItemOnPage == 50);
+            Assert.True(paginatedList.First().Name == "Person 40");
+            Assert.True(paginatedList.Last().Name == "Person 49");
         }
     }
 }
