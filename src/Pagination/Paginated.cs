@@ -4,7 +4,7 @@ namespace Tolitech.CodeGenerator.Pagination
 {
     public class Paginated<T>
     {
-        private PaginatedList<T> _items;
+        private readonly PaginatedList<T> _items;
 
         public Paginated(PaginatedList<T> items, int maxPages)
         {
